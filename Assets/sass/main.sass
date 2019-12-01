@@ -1,0 +1,39 @@
+/*Переменные с цветом*/
+@import "colors"
+
+html
+	font-size: 14px
+
+body
+	background-color: $body-bg
+	color: $dark
+	font-family: 'Roboto', sans-serif
+
+.logo_png
+	width: 200px
+	height: 70px
+
+.top-nav
+	background-color: $white
+	padding: 15px
+	&-menu
+		list-style: none
+		padding: 0
+		display: flex
+
+li
+	margin-right: 45px	
+
+a
+	text-transform: uppercase
+	text-decoration: none
+	color: $dark
+	font-weight: 700
+	&::after
+		content: ''
+		width: 100%
+		height: 2px
+		background-color: $active-color
+		display: block
+		transform: translateY(37px) scale(0)
+		transition: all 0.2s
