@@ -9,9 +9,35 @@ body {
   background-color: #eef3f5;
   color: #131313;
   font-family: "Roboto", sans-serif;
-  padding-top: 40px;
 }
 
+a {
+  color: #009adf;
+}
+
+.btn {
+  padding: 20px 30px;
+  display: inline-block;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #009adf;
+}
+.btn-primary {
+  background-color: #009adf;
+  border-bottom: 5px solid #0077ac;
+}
+.btn-primary:hover {
+  background-color: #00acf9;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+/*====================================header========================================= */
 .logo_png {
   width: 200px;
   height: 70px;
@@ -28,18 +54,16 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-
-li {
+.top-nav-menu li {
   margin-right: 45px;
 }
-
-a {
+.top-nav-menu li a {
   text-transform: uppercase;
   text-decoration: none;
   color: #131313;
   font-weight: 700;
 }
-a::after {
+.top-nav-menu li a::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -50,7 +74,78 @@ a::after {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
+.top-nav-menu li a:hover {
+  text-decoration: none;
+}
+.top-nav-menu li a:hover::after {
+  -webkit-transform: translateY(37px) scale(1);
+          transform: translateY(37px) scale(1);
+}
 
-a:hover:after{
-  transform: translateY(37px) scale(1);
+/*================================= main ========================================= */
+.left-sidebar {
+  margin-top: 40px;
+}
+.left-sidebar-menu {
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+}
+.left-sidebar-menu li {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+.left-sidebar-menu li:first-child a {
+  padding-top: 20px;
+}
+.left-sidebar-menu li:last-child a {
+  padding-bottom: 20px;
+}
+.left-sidebar-menu li:hover {
+  background-color: #009adf;
+}
+.left-sidebar-menu li:hover a {
+  color: #fff;
+}
+.left-sidebar-menu li a {
+  display: block;
+  padding: 15px 29px;
+  text-decoration: none;
+  color: #131313;
+  font-size: 16px;
+  font-weight: 400;
+}
+.left-sidebar-object {
+  background-color: #fff;
+  margin-top: 30px;
+}
+.left-sidebar-object img {
+  height: 234px;
+}
+.left-sidebar-object-description {
+  padding: 30px;
+}
+.left-sidebar-object-description h3 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/*=================================content============================== */
+.content {
+  margin-top: 40px;
+}
+
+.directions {
+  margin-top: 40px;
+}
+.directions-block {
+  background-color: #fff;
+  height: 220px;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+}
+.directions-block h3 {
+  color: #009adf;
 }

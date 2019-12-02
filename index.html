@@ -7,12 +7,15 @@
 		<meta name="author" content="">
 		<link rel="icon" href="./favicon.ico">
 
-		<title>СтройИнвест - корпоративный сайт</title>
+		<title>СтройNнвест - корпоративный сайт</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="Assets/css/bootstrap-grid.min.css" rel="stylesheet">
 		<!-- Fonts Google -->
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+		<!-- Slick Slider -->
+		<link rel="stylesheet" type="text/css" href="Assets/slick/slick-theme.css">
+		<link rel="stylesheet" type="text/css" href="Assets/slick/slick.css">
 		<!-- Custom styles for this template -->
 		<link href="Assets/css/main.css" rel="stylesheet">
 	</head>
@@ -38,6 +41,76 @@
 						</ul>
 					</div>
 				</div>
+			</div> <!-- top-nav -->
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="left-sidebar">
+
+						<ul class="left-sidebar-menu ">
+							<li><a href="#">Земля</a></li>
+							<li><a href="#">Жилая недвижимость</a></li>
+							<li><a href="#">Коммерческая недвижимость</a></li>
+							<li><a href="#">Новостройки</a></li>
+							<li><a href="#">Дома/Коттеджи</a></li>
+							<li><a href="#">Строительство</a></li>
+							<li><a href="#">Аренда</a></li>
+						</ul>
+						
+					</div> <!-- /left-sidebar -->
+
+					<div class="left-sidebar-object">
+						<img src="Assets/img/Sidebar-1.jpeg" alt="">
+						<div class="left-sidebar-object-description">
+							<h3>Жилой комплекс в г. Москва</h3>
+							<p>190-квартирный 12-этажный дом №77 по ул. Пушкина в микрорайоне Центральный...</p>
+							<a href="#">Узнать подробнее >></a>
+						</div>	
+					</div>
+
+					<div class="left-sidebar-object">
+						<img src="Assets/img/Sidebar-2.jpeg" alt="">
+						<div class="left-sidebar-object-description">
+							<h3>Жилой комплекс в г. Москва</h3>
+							<p>190-квартирный 12-этажный дом №77 по ул. Пушкина в микрорайоне Центральный...</p>
+							<a href="#">Узнать подробнее >></a>
+						</div>	
+					</div>
+
+				</div>
+				<div class="col-md-8">
+					<div class="content">
+						<h2>СтройNнвест</h2>
+						<p>Компания СтройNнвест предоставляет полный спектр услуг, связанных с проектированием, комплектацией, монтажом оборудования, пуско-наладкой, гарантийным и сервисным обслуживание климатических систем любой сложности, а именно систем бытового и промышленного кондиционирования, вентиляции, отопления, канализации, очитки сточных вод.</p>
+						<p>Кондиционеры бытового и промышленного назначения. Проектирование, поставка, монтаж, пуско-наладка, а также гарантийное и сервисное обслуживание систем кондиционирования любой сложности для помещений различного типа. </p>
+						<p>Проектирование, поставка, монтаж, пуско-наладка, а также гарантийное и сервисное обслуживание систем вентиляции любой сложности для помещений различного назначения. Производство оцинкованных воздуховодов и фасонных изделий к ним.</p>
+						<p>Наша компания предлагает полный комплекс услуг по проектированию, монтажу и пуско-наладке систем отопления любой сложности.</p>
+						<p>Специалисты нашей компании осуществляют установку систем водоснабжения и канализации для небольших бытовых установок, размещающихся в индивидуальных домах, а также для сложных систем, которые осуществляют поставку воды и удаление стоков в производственных и общественных строениях.</p>
+
+						<a href="#" class="btn btn-primary">Узнать больше о компании</a>
+
+					</div>	<!-- /content -->
+					<div class="directions">
+						<h2>Направления деятельности</h2>
+						<div class="directions-blocks">
+							<div class="directions-block"> 
+								<h3>Девелоперские проекты</h3>
+							</div>
+							<div class="directions-block" > 
+								<h3>Продажа недвижимости</h3>
+							</div>
+							<div class="directions-block" > 
+								<h3>Строительство</h3>
+							</div>
+							<div class="directions-block" > 
+								<h3>Инвестиционные программы</h3>
+							</div>
+							<div class="directions-block" > 
+								<h3></h3>
+							</div>
+						</div> <!-- /directions-blocks -->
+					</div>
+				</div>
 			</div>
 		</div> <!-- /container -->
 
@@ -47,5 +120,14 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 		<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		<script src="Assets/slick/slick.js"></script>
+		<script>
+			$('.directions-blocks').slick({
+				arrows:false,
+				dots: true,
+				slidesToShow: 4,
+				slidesToScroll: 1
+			});
+		</script>
 	</body>
 </html>
