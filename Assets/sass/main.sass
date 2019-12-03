@@ -6,6 +6,7 @@ html
 	font-size: 14px
 
 body
+	margin: 0
 	background-color: $body-bg
 	color: $dark
 	font-family: 'Roboto', sans-serif
@@ -96,6 +97,7 @@ h2
 		margin-top: 30px			
 		img
 			height: 234px
+			width: 350px
 			
 		&-description
 			padding: 30px
@@ -109,13 +111,51 @@ h2
 	margin-top: 40px
 .directions
 	margin-top: 40px
+	
 	&-block
 		background-color: $white
 		height: 220px
+		width: 0px
 		text-align: center
-		margin-left: 20px
-		margin-right: 20px
 		padding: 10px
+		background-position: bottom center
+		background-repeat: no repeat
+		background-size: cover
 		h3
 			color: $active_color
+
+
+/*=============================footer==================================*/
+
+.footer
+	margin-top: 60px
+	background-color: $dark
+	color: $footer-text
+	padding: 59px 0
+	&-policy-link
+		font-size: 12px
+	p
+		margin-bottom: 14px
+	a
+		color: $footer-text
+		text-decoration: none
+		&:hover
+			color: $white
+	small
+		display: block
+		margin-top: 56px
+		line-height: 16
+		font-size: 10px
+	ul
+		padding: 0
+		list-style: none	
+		li
+			line-height: 32px
+	&-contacts
+		text-align: right
+		&-phone
+			color: $active-color
+			font-size: 16px
+			font-weight: bold
+
 			
