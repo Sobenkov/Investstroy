@@ -1,11 +1,13 @@
 /*Переменные с цветом*/
 @import "colors"
 @import "reset"
+@import "fontello"
 
 html
-	font-size: 14px
+	font-size: 10px
 
 body
+	font-size: 14px
 	margin: 0
 	background-color: $body-bg
 	color: $dark
@@ -29,6 +31,9 @@ a
 h2
 	font-size: 24px
 
+.container
+	
+
 /*====================================header=========================================*/
 
 .logo_png
@@ -38,6 +43,18 @@ h2
 .top-nav
 	background-color: $white
 	padding: 15px
+	position: relative
+	&-btn
+		display: none
+		width: 40px
+		height: 40px
+		background-color: transparent
+		border: none
+		font-size: 20px
+		position: absolute
+		right: 15px
+		top: -40px
+		cursor: pointer
 	&-menu
 		list-style: none
 		padding: 0
@@ -67,8 +84,28 @@ h2
 /*================================= main =========================================*/
 
 .left-sidebar
-	margin-top: 40px
-	
+	margin-top: 4rem
+	font-weight: bold
+	color: $active-color
+	&-btn
+		display: none
+		background-color: $white
+		padding: 23px
+		position: relative
+		&:hover
+			cursor: pointer
+		&::after
+			content: ''
+			display: inline-block
+			width: 20px
+			height: 20px
+			position: absolute
+			top: 50%
+			right: 23px
+			margin-top: -15px
+			border-bottom: 2px solid $dark
+			border-right: 2px solid $dark
+			transform: rotate(45deg)
 	&-menu
 		background-color: $white
 		list-style: none
@@ -97,8 +134,7 @@ h2
 		margin-top: 30px			
 		img
 			height: 234px
-			width: 350px
-			
+			width: 350px	
 		&-description
 			padding: 30px
 			h3
@@ -111,11 +147,11 @@ h2
 	margin-top: 40px
 .directions
 	margin-top: 40px
+	display: block
 	
 	&-block
 		background-color: $white
 		height: 220px
-		width: 0px
 		text-align: center
 		padding: 10px
 		background-position: bottom center
@@ -144,7 +180,6 @@ h2
 	small
 		display: block
 		margin-top: 56px
-		line-height: 16
 		font-size: 10px
 	ul
 		padding: 0
@@ -157,5 +192,24 @@ h2
 			color: $active-color
 			font-size: 16px
 			font-weight: bold
+	&-social-links
+		@extend .footer-contacts
+		li
+			display: inline-block
+			width: 42px
+			height: 42px
+			background-color: rgba($white, 0.1)
+			text-align: center
+			border-radius: 50%
+			line-height: 42px
+			margin-left: 5px
+			transition: all 0.2s
+			&:hover
+				background-color: rgba($white, 0.9)
+				color: $dark
+
+/*=================================adaptiv================================*/
+
+@import "media"
 
 			

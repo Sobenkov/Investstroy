@@ -1,11 +1,77 @@
 @charset "UTF-8";
 /*Переменные с цветом */
 /*цвет фона для сайта */
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/fontello.eot?92977596");
+  src: url("../fonts/fontello.eot?92977596#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?92977596") format("woff2"), url("../fonts/fontello.woff?92977596") format("woff"), url("../fonts/fontello.ttf?92977596") format("truetype"), url("../fonts/fontello.svg?92977596#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?92977596#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-vk:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\f008';
+}
+
+/* '' */
+.icon-facebook:before {
+  content: '\f300';
+}
+
+/* '' */
+.icon-instagram:before {
+  content: '\f32d';
+}
+
+/* '' */
 html {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 body {
+  font-size: 14px;
   margin: 0;
   background-color: #eef3f5;
   color: #131313;
@@ -47,6 +113,19 @@ h2 {
 .top-nav {
   background-color: #fff;
   padding: 15px;
+  position: relative;
+}
+.top-nav-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: -40px;
+  cursor: pointer;
 }
 .top-nav-menu {
   list-style: none;
@@ -85,7 +164,32 @@ h2 {
 
 /*================================= main ========================================= */
 .left-sidebar {
-  margin-top: 40px;
+  margin-top: 4rem;
+  font-weight: bold;
+  color: #009adf;
+}
+.left-sidebar-btn {
+  display: none;
+  background-color: #fff;
+  padding: 23px;
+  position: relative;
+}
+.left-sidebar-btn:hover {
+  cursor: pointer;
+}
+.left-sidebar-btn::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 23px;
+  margin-top: -15px;
+  border-bottom: 2px solid #131313;
+  border-right: 2px solid #131313;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .left-sidebar-menu {
   background-color: #fff;
@@ -139,11 +243,11 @@ h2 {
 
 .directions {
   margin-top: 40px;
+  display: block;
 }
 .directions-block {
   background-color: #fff;
   height: 220px;
-  width: 0px;
   text-align: center;
   padding: 10px;
   background-position: bottom center;
@@ -177,7 +281,6 @@ h2 {
 .footer small {
   display: block;
   margin-top: 56px;
-  line-height: 16;
   font-size: 10px;
 }
 .footer ul {
@@ -187,11 +290,119 @@ h2 {
 .footer ul li {
   line-height: 32px;
 }
-.footer-contacts {
+.footer-contacts, .footer-social-links {
   text-align: right;
 }
 .footer-contacts-phone {
   color: #009adf;
   font-size: 16px;
   font-weight: bold;
+}
+.footer-social-links li {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  border-radius: 50%;
+  line-height: 42px;
+  margin-left: 5px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.footer-social-links li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #131313;
+}
+
+/*=================================adaptiv================================ */
+/*=======adaptiv======== */
+@media (max-width: 1024px) {
+  .top-nav-menu {
+    font-size: 10px;
+  }
+  .top-nav-menu li {
+    margin-right: 10px;
+  }
+
+  .left-sidebar {
+    margin-top: 14px;
+  }
+  .left-sidebar-btn {
+    display: block;
+  }
+  .left-sidebar-menu {
+    display: none;
+  }
+  .left-sidebar-menu_active {
+    display: block;
+  }
+  .left-sidebar-object {
+    display: none;
+  }
+}
+@media (max-width: 765px) {
+  .top-nav-btn {
+    display: block;
+  }
+  .top-nav-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: none;
+  }
+  .top-nav-menu li a {
+    line-height: 2;
+  }
+  .top-nav-menu li a::after {
+    display: none;
+  }
+  .top-nav-menu_active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .left-sidebar {
+    margin-top: 14px;
+  }
+  .left-sidebar-btn {
+    display: block;
+  }
+  .left-sidebar-menu {
+    display: none;
+  }
+  .left-sidebar-menu_active {
+    display: block;
+  }
+  .left-sidebar-object {
+    display: none;
+  }
+
+  .content {
+    font-size: 16px;
+    text-align: center;
+  }
+  .content a {
+    margin-top: 20px;
+  }
+
+  .directions {
+    text-align: center;
+  }
+
+  .copy {
+    text-align: center;
+  }
+  .copy small {
+    margin-top: 10px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+  .footer-contacts, .footer-social-links {
+    text-align: left;
+  }
 }

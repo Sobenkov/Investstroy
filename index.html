@@ -31,6 +31,9 @@
 						</div> 
 					</div>
 					<div class="col-md">
+						<button class="top-nav-btn">
+							<i class="icon-menu"></i>
+						</button>
 						<ul class="top-nav-menu justify-content-end">
 							<li><a href="#">Главная</a></li>
 							<li><a href="#">О компании</a></li>
@@ -44,18 +47,20 @@
 			</div> <!-- top-nav -->
 
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="left-sidebar">
-
-						<ul class="left-sidebar-menu ">
-							<li><a href="#">Земля</a></li>
-							<li><a href="#">Жилая недвижимость</a></li>
-							<li><a href="#">Коммерческая недвижимость</a></li>
-							<li><a href="#">Новостройки</a></li>
-							<li><a href="#">Дома/Коттеджи</a></li>
-							<li><a href="#">Строительство</a></li>
-							<li><a href="#">Аренда</a></li>
-						</ul>
+						<div class="left-sidebar-btn">
+							Категории
+						</div>
+							<ul class="left-sidebar-menu ">
+								<li><a href="#">Земля</a></li>
+								<li><a href="#">Жилая недвижимость</a></li>
+								<li><a href="#">Коммерческая недвижимость</a></li>
+								<li><a href="#">Новостройки</a></li>
+								<li><a href="#">Дома/Коттеджи</a></li>
+								<li><a href="#">Строительство</a></li>
+								<li><a href="#">Аренда</a></li>
+							</ul>
 						
 					</div> <!-- /left-sidebar -->
 
@@ -78,7 +83,11 @@
 					</div>
 
 				</div>
-				<div class="col-md-8">
+
+
+				<!-- menu content -->
+
+				<div class="col-lg-8">
 					<div class="content">
 						<h2>СтройNнвест</h2>
 						<p>Компания СтройNнвест предоставляет полный спектр услуг, связанных с проектированием, комплектацией, монтажом оборудования, пуско-наладкой, гарантийным и сервисным обслуживание климатических систем любой сложности, а именно систем бытового и промышленного кондиционирования, вентиляции, отопления, канализации, очитки сточных вод.</p>
@@ -90,6 +99,7 @@
 						<a href="#" class="btn btn-primary">Узнать больше о компании</a>
 
 					</div>	<!-- /content -->
+
 					<div class="directions">
 						<h2>Направления деятельности</h2>
 						<div class="directions-blocks">
@@ -126,7 +136,7 @@
 					</div>
 				</div>
 
-				<div class="col-md">
+				<div class="col-md col-6">
 					<ul class="footer-menu">
 							<li><a href="#">Главная</a></li>
 							<li><a href="#">О компании</a></li>
@@ -137,7 +147,7 @@
 						</ul>
 				</div>
 
-				<div class="col-md">
+				<div class="col-md col-6">
 					<ul class="footer-menu ">
 							<li><a href="#">Земля</a></li>
 							<li><a href="#">Жилая недвижимость</a></li>
@@ -155,6 +165,11 @@
 						<p class="footer-contacts-address">г. Москва</p>
 						<p class="footer-contacts-address">г. Брянск</p>
 						<p class="footer-contacts-email">Sobenkov95@yandex.ru</p>
+					</div>
+					<div class="footer-social-links">
+						<li><a href="#"><i class="icon-vk"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>				
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
 					</div>
 				</div>
 				</div>
@@ -174,7 +189,33 @@
 				arrows:false,
 				dots: true,
 				slidesToShow: 4,
-				slidesToScroll: 1
+				slidesToScroll: 1,
+				responsive: [
+					{
+					breakpoint: 600,
+					settings:{
+						slidesToShow: 1
+					}
+					}
+				]
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				var menuBtn = $('.top-nav-btn');
+				var sidebarBtn = $('.left-sidebar-btn');
+				var menu = $('.top-nav-menu');
+				var sidebarMenu = $('.left-sidebar-menu');
+
+				menuBtn.on('click',  function(event) {
+					event.preventDefault();
+					menu.toggleClass('top-nav-menu_active');
+				});
+
+				sidebarBtn.on('click',  function(event) {
+					event.preventDefault();
+					sidebarMenu.toggleClass('left-sidebar-menu_active');
+				});
 			});
 		</script>
 	</body>

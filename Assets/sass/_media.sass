@@ -1,0 +1,62 @@
+/*=======adaptiv========*/
+
+@media (max-width: 1024px)
+	.top-nav
+		&-menu
+			font-size: 10px
+			li
+				margin-right: 10px	
+	.left-sidebar
+		&-btn
+			display: block
+		&-menu
+			display: none
+			&_active
+				display: block
+		margin-top: 14px	
+
+		&-object
+			display: none		
+
+@media (max-width: 765px)
+	.top-nav
+		&-btn
+			display: block
+		&-menu
+			flex-direction: column
+			display: none
+			li
+				a
+					line-height: 2
+					&::after
+						display: none
+			&_active
+				display: flex		
+	.left-sidebar
+		&-btn
+			display: block
+		&-menu
+			display: none
+			&_active
+				display: block
+		margin-top: 14px	
+
+		&-object
+			display: none	
+	.content
+		font-size: 16px
+		text-align: center	
+		a
+			margin-top: 20px
+
+	.directions
+		text-align: center
+
+	.copy
+		text-align: center
+		small
+			margin-top: 10px
+	.footer
+		text-align: center
+		&-contacts
+			text-align: left
