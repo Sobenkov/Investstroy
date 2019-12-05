@@ -3,8 +3,8 @@
 /*цвет фона для сайта */
 @font-face {
   font-family: 'fontello';
-  src: url("../fonts/fontello.eot?92977596");
-  src: url("../fonts/fontello.eot?92977596#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?92977596") format("woff2"), url("../fonts/fontello.woff?92977596") format("woff"), url("../fonts/fontello.ttf?92977596") format("truetype"), url("../fonts/fontello.svg?92977596#fontello") format("svg");
+  src: url("../fonts/fontello.eot?86764885");
+  src: url("../fonts/fontello.eot?86764885#iefix") format("embedded-opentype"), url("../fonts/fontello.woff2?86764885") format("woff2"), url("../fonts/fontello.woff?86764885") format("woff"), url("../fonts/fontello.ttf?86764885") format("truetype"), url("../fonts/fontello.svg?86764885#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?92977596#fontello') format('svg');
+    src: url('../font/fontello.svg?86764885#fontello') format('svg');
   }
 }
 */
@@ -51,6 +51,16 @@
 }
 
 /* '' */
+.icon-phone:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-mail:before {
+  content: '\e802';
+}
+
+/* '' */
 .icon-menu:before {
   content: '\f008';
 }
@@ -124,7 +134,7 @@ h2 {
   font-size: 20px;
   position: absolute;
   right: 15px;
-  top: -40px;
+  top: -50px;
   cursor: pointer;
 }
 .top-nav-menu {
@@ -136,6 +146,9 @@ h2 {
 }
 .top-nav-menu li {
   margin-right: 45px;
+}
+.top-nav-menu li:last-child {
+  margin-right: 0;
 }
 .top-nav-menu li a {
   text-transform: uppercase;
@@ -225,6 +238,7 @@ h2 {
   margin-top: 30px;
 }
 .left-sidebar-object img {
+  max-width: 100%;
   height: 234px;
   width: 350px;
 }
@@ -244,6 +258,9 @@ h2 {
 .directions {
   margin-top: 40px;
   display: block;
+}
+.directions h2 {
+  margin-bottom: 40px;
 }
 .directions-block {
   background-color: #fff;
@@ -315,14 +332,106 @@ h2 {
   color: #131313;
 }
 
+/*=================================team==================================== */
+.team {
+  text-align: center;
+}
+.team h2 {
+  text-align: left;
+  margin: 40px 0;
+}
+.team h4 {
+  margin-bottom: 15px;
+}
+.team img {
+  max-width: 100%;
+  width: 220px;
+  height: 320px;
+}
+.team p {
+  margin-bottom: 40px;
+}
+
+/*===============================contacts================================== */
+.contacts {
+  font-size: 16px;
+}
+.contacts-address {
+  display: block;
+  line-height: 2;
+  text-decoration: none;
+  color: #009adf;
+}
+.contacts-btn {
+  margin: 25px 0 35px 0;
+}
+.contacts-social-links li {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+}
+.contacts-social-links li a {
+  display: inline-block;
+  background-color: #009adf;
+  color: #fff;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 33px;
+  border-radius: 50%;
+}
+
+/*=================================organization=========================== */
+.organization-card {
+  background-color: #fff;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  min-height: 42rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.organization-card:hover {
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 1, 0.1);
+}
+.organization-card a {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
+}
+.organization-card small {
+  display: block;
+  color: #666666;
+  line-height: 1.5;
+}
+.organization-card P {
+  line-height: 22px;
+}
+
 /*=================================adaptiv================================ */
 /*=======adaptiv======== */
+@media (max-width: 1200px) {
+  .top-nav-menu li {
+    margin-right: 10px;
+  }
+
+  .team img {
+    height: 250px;
+  }
+}
 @media (max-width: 1024px) {
   .top-nav-menu {
     font-size: 10px;
   }
   .top-nav-menu li {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .left-sidebar {
@@ -340,8 +449,13 @@ h2 {
   .left-sidebar-object {
     display: none;
   }
+
+  .team img {
+    width: 260px;
+    height: 360px;
+  }
 }
-@media (max-width: 765px) {
+@media (max-width: 767px) {
   .top-nav-btn {
     display: block;
   }
@@ -382,7 +496,6 @@ h2 {
 
   .content {
     font-size: 16px;
-    text-align: center;
   }
   .content a {
     margin-top: 20px;
@@ -397,6 +510,11 @@ h2 {
   }
   .copy small {
     margin-top: 10px;
+  }
+
+  .team img {
+    width: 260px;
+    height: 360px;
   }
 
   .footer {
