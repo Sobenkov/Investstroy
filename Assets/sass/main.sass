@@ -278,7 +278,106 @@ h2
 			line-height: 1.5
 		P
 			line-height: 22px
-		
+
+/*=================================investmenst============================*/
+
+.calc
+	h4
+		margin-top: 0
+		margin-bottom: 30px
+	margin-top: 40px
+	&-programms
+		display: flex
+		flex-wrap: wrap
+	&-legal
+		font-size: 12px
+	&-radio
+		flex-basis: 50%
+		&:last-child
+			flex-basis: 100%
+			display: flex
+		label
+			display: inline-block
+			margin-bottom: 20px
+			small
+				display: block
+				margin-left: 28px
+				font-size: 10px
+				color: $footer-text
+			&:hover
+				cursor: pointer
+			&::before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 24px
+				height: 24px
+				box-shadow: 0 5px 10px rgba(0,0,1,0.1)
+				background-color: $white
+				border: 6px solid $white
+				border-radius: 50%
+				transition: all 0.2s
+
+	input[type='radio']
+		display: none
+		&:checked
+			&+label::before
+				background-color: $active-color
+				border: 6px solid $white
+	&-popular
+		padding: 0 5px
+		margin-left: 16px
+		height: 25px
+		color: $white
+		display: flex
+		justify-content: center
+		align-items: center
+		text-transform: uppercase
+		font-size: 10px
+		background-color: $active-color	
+		position: relative
+		&::before
+			content: ''
+			width: 6px
+			height: 13px
+			border: 6px solid transparent
+			border-right: 6px solid $active-color
+			position: absolute
+			left: -12px
+			top: 50%
+			margin-top: -6px
+	&-sum
+		&-invest
+			margin-top: 30px
+			&-label
+				margin-right: 10px
+			&-num
+				display: inline-block
+				padding: 15px 20px
+				width: 170px
+				height: 58px	
+				font-size: 18px
+	&-total
+		margin-top: 20px
+		display: inline-block
+		text-align: center
+		padding: 15px 20px
+		margin-right: 40px
+		strong
+			font-size: 18px
+			color: $active-color
+		small
+			font-size: 10px
+	&-monthly
+		display: inline-block
+		text-align: center
+		padding: 15px 20px
+		strong
+			font-size: 18px
+			color: $active-color
+		small
+			font-size: 10px
+
 /*=================================adaptiv================================*/
 
 @import "media"
