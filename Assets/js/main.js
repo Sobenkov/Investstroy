@@ -40,7 +40,7 @@ $('.directions-blocks').slick({
 
 // ползунок
 var elem = document.querySelector('.calc-range');
-var init = new Powerange(elem, { min: 100000, max: 3000000, start: 100000, hideRange: true, step: 100000 });
+var init = new Powerange(elem, { min: 100000, max: 3000000, start: 100000, hideRange: true});
 var per, month, result, total, monthly;
 var money = +$('.calc-range').val();
 
